@@ -302,6 +302,10 @@
         .why-text { font-size: 13px; color: var(--muted); line-height: 1.75; }
 
         /* WORK */
+        .projects-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+        }
+        @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
         .work-card {
             display: block; text-decoration: none;
             background: var(--surface); border: 1px solid var(--border);
@@ -651,34 +655,65 @@
     <div class="label reveal">в действии</div>
     <h2 class="reveal">Функционал вживую</h2>
 
-    <a href="http://5.42.126.15/" target="_blank" class="project-card reveal">
-        <div class="project-visual">
-            <div class="project-glow"></div>
-            <div class="project-glow project-glow-2"></div>
-            <div class="project-lines">
-                <div class="p-line"></div>
-                <div class="p-line"></div>
-                <div class="p-line"></div>
+    <div class="projects-grid">
+        <a href="https://infy-app.ru/" target="_blank" class="project-card reveal">
+            <div class="project-visual">
+                <div class="project-glow"></div>
+                <div class="project-glow project-glow-2"></div>
+                <div class="project-lines">
+                    <div class="p-line"></div>
+                    <div class="p-line"></div>
+                    <div class="p-line"></div>
+                </div>
+                <div class="project-open">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none">
+                        <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                    </svg>
+                    Открыть проект
+                </div>
             </div>
-            <div class="project-open">
-                <svg width="18" height="18" viewBox="0 0 12 12" fill="none">
-                    <path d="M1 11L11 1M11 1H4M11 1V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
-                </svg>
-                Открыть проект
+            <div class="project-footer">
+                <div>
+                    <div class="project-name">Infy — образовательная соцсеть</div>
+                    <div class="project-tags">fullstack · дизайн · деплой</div>
+                </div>
+                <div class="project-arrow">
+                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
+                        <path d="M1 11L11 1M11 1H4M11 1V8" stroke="#B08FFF" stroke-width="1.3" stroke-linecap="round"/>
+                    </svg>
+                </div>
             </div>
-        </div>
-        <div class="project-footer">
-            <div>
-                <div class="project-name">Тестовый проект</div>
-                <div class="project-tags">fullstack · дизайн · деплой</div>
+        </a>
+
+        <a href="https://t.me/ai_subscriptionsbot" target="_blank" class="project-card reveal">
+            <div class="project-visual project-visual--bot">
+                <div class="project-glow"></div>
+                <div class="project-glow project-glow-2"></div>
+                <div class="project-lines">
+                    <div class="p-line"></div>
+                    <div class="p-line"></div>
+                    <div class="p-line"></div>
+                </div>
+                <div class="project-open">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21.8 5.1L18.5 19.7c-.2.9-.8 1.2-1.7.7l-4.6-3.4-2.2 2.1c-.2.2-.5.3-.9.3l.3-4.7 8-7.2c.3-.3 0-.5-.4-.2L5.7 14.7 1.2 13.3c-.9-.3-.9-.9.2-1.3L20.4 4c.8-.3 1.5.2 1.4 1.1z"/>
+                    </svg>
+                    Открыть в Telegram
+                </div>
             </div>
-            <div class="project-arrow">
-                <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
-                    <path d="M1 11L11 1M11 1H4M11 1V8" stroke="#B08FFF" stroke-width="1.3" stroke-linecap="round"/>
-                </svg>
+            <div class="project-footer">
+                <div>
+                    <div class="project-name">Бот для покупки AI-подписок</div>
+                    <div class="project-tags">telegram bot · автоматизация</div>
+                </div>
+                <div class="project-arrow">
+                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
+                        <path d="M1 11L11 1M11 1H4M11 1V8" stroke="#B08FFF" stroke-width="1.3" stroke-linecap="round"/>
+                    </svg>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </div>
 
 <!-- PRICING -->
